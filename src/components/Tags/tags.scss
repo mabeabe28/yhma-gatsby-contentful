@@ -1,0 +1,14 @@
+.tags {
+    display: flex;
+    gap: $space-md;
+
+    .tag {
+        background-color: $black-fade-5;
+        border-radius: $radius-sm;
+        line-height: $solid;
+        padding: $space-sm $space-md;
+      }
+}
+  
+ 
+  

@@ -5,11 +5,11 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
 import readingTime from 'reading-time'
 
-import Seo from '../../components/Seo'
 import Layout from '../../components/Layouts/main'
+import Seo from '../../components/Seo'
 import Hero from '../../components/Hero'
 import Tags from '../../components/Tags'
-import * as styles from './blog-post.module.css'
+import './blog-post.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -34,20 +34,20 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description}
         />
-        <div className={styles.container}>
-          <span className={styles.meta}>
+        <div className="[ blog-post-container ]">
+          <span className="[ meta ]">
             {post.author?.name} &middot;{' '}
             <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
             {timeToRead} minute read
           </span>
-          <div className={styles.article}>
-            <div className={styles.body}>
+          <div className="[ article ]">
+            <div className="[ body ]">
               {post.body?.raw && renderRichText(post.body)}
             </div>
             <Tags tags={post.tags} />
             {(previous || next) && (
               <nav>
-                <ul className={styles.articleNavigation}>
+                <ul className="[ articleNavigation ]">
                   {previous && (
                     <li>
                       <Link to={`/${previous.category.slug}/${previous.slug}`} rel="prev">

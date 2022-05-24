@@ -5,7 +5,8 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 import Container from '../Container'
 import Tags from '../Tags'
-import * as styles from './article-preview.module.css'
+import './article-preview.scss'
+
 
 const ArticlePreview = ({ posts }) => {
   if (!posts) return null
@@ -13,18 +14,18 @@ const ArticlePreview = ({ posts }) => {
 
   return (
     <Container>
-      <ul className={styles.articleList}>
+      <ul className="[ article-list ]">
         {posts.map((post) => {
           return (
             <li key={post.slug}>
-              <Link to={`/${post.category.slug}/${post.slug}`} className={styles.link}>
+              <Link to={`/${post.category.slug}/${post.slug}`} className="[ link ]">
                 <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} />
-                <h2 className={styles.title}>{post.title}</h2>
+                <h2 className="[ title ]">{post.title}</h2>
               </Link>
               <div>
                 {post.description?.raw && renderRichText(post.description)}
               </div>
-              <div className={styles.meta}>
+              <div className="[ meta ]">
                 <small className="meta">{post.publishDate}</small>
                 <Tags tags={post.tags} />
               </div>

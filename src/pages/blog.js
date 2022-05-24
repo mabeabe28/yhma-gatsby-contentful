@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Seo from '../components/Seo'
 import Layout from '../components/Layouts/main'
+import Seo from '../components/Seo'
 import Hero from '../components/Hero'
 import ArticlePreview from '../components/ArticlePreview'
 

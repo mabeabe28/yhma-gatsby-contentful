@@ -36,10 +36,16 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "YHMA",
+    description: "A lifestyle content brand",
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        additionalData: `@import "./src/styles/sass/global.scss";`,
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",

@@ -1,0 +1,6 @@
+.category-container{
+    @media (min-width: 768px) {
+        max-width: $size-max-width;
+        margin: 0 auto;
+    }
+}

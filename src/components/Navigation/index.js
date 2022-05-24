@@ -1,21 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import * as styles from './navigation.module.css'
+import './navigation.scss'
 
 const Navigation = () => (
-  <nav role="navigation" className={styles.container} aria-label="Main">
-    <Link to="/" className={styles.logoLink}>
-      <span className={styles.logo} />
-      <span className={styles.navigationItem}>Gatsby Starter Contentful</span>
+  <nav role="navigation" className="[ navigation-container ]" aria-label="Main">
+    <Link to="/" className="[ logoLink ]">
+      <span className="[ logo ]" />
+      <span className="[ navigationItem ]">Gatsby Starter Contentful</span>
     </Link>
-    <ul className={styles.navigation}>
-      <li className={styles.navigationItem}>
+    <ul className="[ navigation ]">
+      <li className="[ navigationItem ]">
         <Link to="/" activeClassName="active">
           Home
         </Link>
       </li>
-      <li className={styles.navigationItem}>
+      <li className="[ navigationItem ]">
         <Link to="/blog/" activeClassName="active">
           Blog
         </Link>

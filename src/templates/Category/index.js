@@ -1,26 +1,19 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
-import readingTime from 'reading-time'
+
+import Layout from '../../components/Layouts/main'
 import ArticlePreview from '../../components/ArticlePreview'
 
-import Seo from '../../components/Seo'
-import Layout from '../../components/Layouts/main'
-import Hero from '../../components/Hero'
-import Tags from '../../components/Tags'
-import * as styles from './category.module.css'
+import './category.scss'
 
 class CategoryTemplate extends React.Component {
   render() {
-    console.log('cat temp props',this.props);
     const posts = get(this.props, 'data.allContentfulBlogPost.nodes');
-    console.log('posts',posts);
 
     return (
       <Layout location={this.props.location}>
-        <div className={styles.container}>
+        <div className="[ category-container ]">
           Category Page
           <ArticlePreview posts={posts} />
 
