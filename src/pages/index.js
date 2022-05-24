@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 //import get from 'lodash/get'
 
 import Layout from '../components/Layouts/main'
+import Container from '../components/Container'
+
 // import Hero from '../components/Hero'
 // import ArticlePreview from '../components/ArticlePreview'
 
@@ -13,6 +15,10 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        <Container
+          className="[ text-center ]"
+        >
+
         <h1>NEW YHMA SITE COMING SOON</h1>
         Visit <a href="https://archived.youhadme.at">archived.youhadme.at</a> for the old version
         {/* <Hero
@@ -21,6 +27,7 @@ class RootIndex extends React.Component {
           content={author.shortBio}
         /> */}
         {/* <ArticlePreview posts={posts} /> */}
+        </Container>
       </Layout>
     )
   }

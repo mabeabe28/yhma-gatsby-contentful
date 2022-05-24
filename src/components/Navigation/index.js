@@ -7,7 +7,7 @@ const Navigation = () => (
   <nav role="navigation" className="[ navigation-container ]" aria-label="Main">
     <Link to="/" className="[ logoLink ]">
       <span className="[ logo ]" />
-      <span className="[ navigationItem ]">Gatsby Starter Contentful</span>
+      <span className="[ navigationItem ]">YHMA</span>
     </Link>
     <ul className="[ navigation ]">
       <li className="[ navigationItem ]">
@@ -15,11 +15,11 @@ const Navigation = () => (
           Home
         </Link>
       </li>
-      <li className="[ navigationItem ]">
+      {/* <li className="[ navigationItem ]">
         <Link to="/blog/" activeClassName="active">
           Blog
         </Link>
-      </li>
+      </li> */}
     </ul>
   </nav>
 )
