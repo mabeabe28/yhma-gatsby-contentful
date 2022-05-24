@@ -5,10 +5,10 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
 import readingTime from 'reading-time'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import Tags from '../components/tags'
+import Seo from '../../components/Seo'
+import Layout from '../../components/Layouts/main'
+import Hero from '../../components/Hero'
+import Tags from '../../components/Tags'
 import * as styles from './blog-post.module.css'
 
 class BlogPostTemplate extends React.Component {
@@ -50,14 +50,14 @@ class BlogPostTemplate extends React.Component {
                 <ul className={styles.articleNavigation}>
                   {previous && (
                     <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
+                      <Link to={`/${previous.category.slug}/${previous.slug}`} rel="prev">
                         ← {previous.title}
                       </Link>
                     </li>
                   )}
                   {next && (
                     <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
+                      <Link to={`/${next.category.slug}/${next.slug}`} rel="next">
                         {next.title} →
                       </Link>
                     </li>
@@ -83,6 +83,10 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       slug
       title
+      category {
+        name
+        slug
+      }
       author {
         name
       }
@@ -105,10 +109,16 @@ export const pageQuery = graphql`
     previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
       slug
       title
+      category {
+        slug
+      }
     }
     next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
       slug
       title
+      category {
+        slug
+      }
     }
   }
 `

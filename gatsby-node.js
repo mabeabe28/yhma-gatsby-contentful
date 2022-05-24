@@ -4,7 +4,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const blogPost = path.resolve('./src/templates/blog-post.js')
+  const blogPost = path.resolve('./src/templates/BlogPost/index.js')
 
   const result = await graphql(
     `
@@ -13,6 +13,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           nodes {
             title
             slug
+            category {
+              slug
+            }
           }
         }
       }
@@ -40,7 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         index === posts.length - 1 ? null : posts[index + 1].slug
 
       createPage({
-        path: `/blog/${post.slug}/`,
+        path: `/${post.category.slug}/${post.slug}/`,
         component: blogPost,
         context: {
           slug: post.slug,
