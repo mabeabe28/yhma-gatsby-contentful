@@ -15,11 +15,21 @@ const Navigation = () => (
           Home
         </Link>
       </li>
-      {/* <li className="[ navigationItem ]">
-        <Link to="/blog/" activeClassName="active">
-          Blog
+      <li className="[ navigationItem ]">
+        <Link to="https://youtube.com/yhma-team" activeClassName="active">
+          YouTube
         </Link>
-      </li> */}
+      </li>
+      <li className="[ navigationItem ]">
+        <Link to="https://instagram.com/youhadme.at" activeClassName="active">
+          Instagram
+        </Link>
+      </li>
+      <li className="[ navigationItem ]">
+        <Link to="https://archived.youhadme.at" activeClassName="active">
+          Archive
+        </Link>
+      </li>
     </ul>
   </nav>
 )
