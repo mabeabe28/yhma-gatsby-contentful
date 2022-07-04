@@ -20,25 +20,7 @@ class RootIndex extends React.Component {
           className="[ homepage container-full ]"
         >
           <div className="[ homepage-hero ]">
-            <div className="[ homepage-hero-left section ]">
-              <div className="[ content ]">
-                  <FadeIn className="[ title ]" transitionDuration={500}>
-                    YHMA
-                  </FadeIn>
-                  <FadeIn className="[ tagline ]" transitionDuration={1000} delay={200}>
-                    <span><strong>You Had Me At</strong></span>
-                    <span>a group of friends sharing their lifestyle content online</span>
-                    <span><em><strong>new site coming soon</strong></em></span>
-                  </FadeIn>
-               
-
-              </div>
-              
-            </div>
-            <div className="[ homepage-hero-right section ]">
-
-              
-            </div>
+            
           </div>
             
             
