@@ -1,5 +1,5 @@
 {
-  "name": "YHMA",
+  "name": "yhma",
   "description": "YHMA - You Had Me At",
   "private": true,
   "version": "0.0.1",
@@ -48,6 +48,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
+    "clean": "gatsby clean",
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve",
     "postinstall": "node ./bin/hello.js",
