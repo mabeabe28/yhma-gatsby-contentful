@@ -34,9 +34,6 @@ export const MainNav = styled('div')(
     minHeight: theme.space.xl3,
 
     borderBottom: 'solid 0.1px rgba(184, 184, 184, 0.5)',
-    
-    //todo remove when bottom is inactive
-    paddingBottom: theme.space.xl2,
   })
 );
 
@@ -106,36 +103,4 @@ export const StyledExternalLinkMenuItem = styled('a')(
 
   })
 );
-
-export const NavContent = styled('div')(
-  ({theme, scrollPosition}) => ({
-    marginTop: '60px',
-    paddingBottom: theme.space.xl2,
-    opacity: `${100-scrollPosition}%`,
-    [theme.mediaQueries.small]: {
-      marginTop: '8px',
-      paddingBottom: 0,
-    },
-  })
-);
-
-
-export const NavContentTitle = styled(FadeIn)(
-  ({theme}) => ({
-    fontSize: '80px',
-    fontWeight: theme.weight.bold,
-    lineHeight: 1,
-    width: '100%',
-    textAlign: 'center',
-  })
-);
-
-export const NavContentTagLine = styled(FadeIn)(
-  () => ({
-    width: '100%',
-    textAlign: 'center',
-  })
-);
-
-
 

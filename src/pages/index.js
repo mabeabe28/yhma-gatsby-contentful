@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 //import get from 'lodash/get'
 
 import Layout from '../components/Layouts/main'
+import NavigationHero from '../components/NavigationHero';
 
 class RootIndex extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class RootIndex extends React.Component {
 
     return (
         <Layout location={this.props.location}>
+          <NavigationHero/>
           <div style={{height:'100vh'}}>
           </div>
         </Layout>
