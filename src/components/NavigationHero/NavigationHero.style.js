@@ -25,7 +25,7 @@ export const NavContent = styled('div')(
   ({theme, scrollPosition}) => ({
     marginTop: '140px',
     paddingBottom: theme.space.xl2,
-    opacity: `${100-scrollPosition}%`,
+    opacity: `${100-(scrollPosition/1.6)}%`,
     [theme.mediaQueries.small]: {
       marginTop: '120px',
       paddingBottom: 0,
