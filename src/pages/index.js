@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 //import get from 'lodash/get'
 
 import Layout from '../components/Layouts/main'
-import { Wrapper, Hero, Content } from './index.style';
 import { theme } from '../components/Theme/global';
 import { ThemeProvider } from 'styled-components';
 
@@ -15,12 +14,12 @@ class RootIndex extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Layout location={this.props.location}>
-          <Wrapper>
+          {/* <Wrapper>
             <Hero color='blue'>
             </Hero>
             <Content darkMode={true}>
             </Content>
-          </Wrapper>
+          </Wrapper> */}
         </Layout>
       </ThemeProvider>
     )
