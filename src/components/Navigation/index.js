@@ -1,53 +1,79 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { 
+  NavigationContainer,
+  Wrapper,
+  MainNav,
+  StyledLinkLogo,
+  NavigationMenu,
+  NavigationMenuItem,
+  StyledLinkMenuItem,
+  StyledExternalLinkMenuItem,
+  NavContent,
+  NavContentTitle,
+  NavContentTagLine,
+} from './Navigation.style';
 
-import FadeIn from 'react-fade-in';
-import './navigation.scss'
+import useScrollPosition from "../../hooks/useScrollPosition";
 
-const Navigation = () => (
-  <nav role="navigation" className="[ navigation-container ]" aria-label="Main">
-    <div className="[ navigation-wrapper ]">
 
-      <div className="[ main-nav ]">
-        <Link to="/" className="[ logoLink ]">
-          <span className="[ logo ]" />
-          <span className="[ navigationItem ]">YHMA</span>
-        </Link>
-        <FadeIn className="[ navigation ]">
-          <li className="[ navigationItem ]">
-            <Link to="/" activeClassName="active">
+
+const Navigation = () => {
+
+  const scrollPosition = useScrollPosition();
+  
+  return(
+    <NavigationContainer>
+    <Wrapper>
+
+      <MainNav>
+
+        <StyledLinkLogo to="/">
+          YHMA
+        </StyledLinkLogo>
+
+        <NavigationMenu>
+          <NavigationMenuItem>
+            <StyledLinkMenuItem to="/" activeClassName="active">
               Home
-            </Link>
-          </li>
-          <li className="[ navigationItem ]">
-            <Link to="https://youtube.com/yhma-team" activeClassName="active">
+            </StyledLinkMenuItem>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <StyledExternalLinkMenuItem href="https://youtube.com/yhma-team" target={'_blank'}>
               YouTube
-            </Link>
-          </li>
-          <li className="[ navigationItem ]">
-            <Link to="https://instagram.com/youhadme.at" activeClassName="active">
+            </StyledExternalLinkMenuItem>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <StyledExternalLinkMenuItem href="https://instagram.com/youhadme.at" target={'_blank'}>
               Instagram
-            </Link>
-          </li>
-          <li className="[ navigationItem ]">
-            <Link to="https://archived.youhadme.at" activeClassName="active">
+            </StyledExternalLinkMenuItem>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <StyledExternalLinkMenuItem href="https://archived.youhadme.at" target={'_blank'}>
               Archive
-            </Link>
-          </li>
-        </FadeIn>
-      </div>
-      <div className="[ nav-content ]">
-          <FadeIn className="[ title ]" transitionDuration={500}>
+            </StyledExternalLinkMenuItem>
+          </NavigationMenuItem>
+        </NavigationMenu>
+
+      </MainNav>
+
+      {(scrollPosition < 100) && (
+        <NavContent scrollPosition={scrollPosition}>
+          <NavContentTitle  transitionDuration={500}>
             YHMA
-          </FadeIn>
-          <FadeIn className="[ tagline ]" transitionDuration={1000} delay={200}>
+          </NavContentTitle>
+          <NavContentTagLine transitionDuration={1000} delay={200}>
             <span><em>(acronym)</em> - <strong>You Had Me At</strong></span>
             <span>a group of friends sharing their lifestyle content online</span>
-          </FadeIn>
-      </div>
+            <span>New Website in Progress...</span>
 
-    </div>
-  </nav>
-)
+          </NavContentTagLine>
+      </NavContent>
+      )}
+      
+
+    </Wrapper>
+  </NavigationContainer>
+  );
+};
 
 export default Navigation

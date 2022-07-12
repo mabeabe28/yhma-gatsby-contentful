@@ -3,11 +3,9 @@ import { graphql } from 'gatsby'
 //import get from 'lodash/get'
 
 import Layout from '../components/Layouts/main'
-import FadeIn from 'react-fade-in';
-
-import './homepage.scss'
-// import Hero from '../components/Hero'
-// import ArticlePreview from '../components/ArticlePreview'
+import { Wrapper, Hero, Content } from './index.style';
+import { theme } from '../components/Theme/global';
+import { ThemeProvider } from 'styled-components';
 
 class RootIndex extends React.Component {
   render() {
@@ -15,17 +13,16 @@ class RootIndex extends React.Component {
     // const [author] = get(this, 'props.data.allContentfulPerson.nodes')
 
     return (
-      <Layout location={this.props.location}>
-        <div
-          className="[ homepage container-full ]"
-        >
-          <div className="[ homepage-hero ]">
-            
-          </div>
-            
-            
-        </div>
-      </Layout>
+      <ThemeProvider theme={theme}>
+        <Layout location={this.props.location}>
+          <Wrapper>
+            <Hero color='blue'>
+            </Hero>
+            <Content darkMode={true}>
+            </Content>
+          </Wrapper>
+        </Layout>
+      </ThemeProvider>
     )
   }
 }
