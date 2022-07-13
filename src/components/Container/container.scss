@@ -2,4 +2,6 @@
     max-width: $size-max-width;
     margin: 0 auto;
     padding: $space-2xl $size-gutter;
+    display: flex;
+    flex-wrap: wrap;
 }

@@ -8,16 +8,17 @@ export const NavigationContainer = styled('nav')(
     width: '100%',
     position: 'fixed',
     zIndex: 999,
+    top: '0px',
   })
 );
 
 export const Wrapper = styled('div')(
   ({theme}) => ({
-    margin: `${theme.space.xl2} ${theme.space.xl2}`,
-    backgroundColor: theme.palette.background,
+    //margin: `${theme.space.xl2} ${theme.space.xl2}`,
+    backgroundColor: theme.palette.light,
     // padding: $space-2xl $space-3xl;
     padding: `${theme.space.xl2} ${theme.space.xl3}`,
-    borderRadius: '12px',
+    borderRadius: '0px 0px 12px 12px',
 
     [theme.mediaQueries.small]: {
       margin: 0,
@@ -45,7 +46,7 @@ export const StyledLinkLogo = styled(Link)(
     flexShrink: 0,
     gap: theme.space.md,
     fontWeight: theme.weight.bold,
-
+    position: 'absolute',
     '&:hover': {
       color: theme.palette.primary,
     },

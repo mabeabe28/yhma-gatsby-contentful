@@ -1,20 +1,24 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-//import get from 'lodash/get'
+import get from 'lodash/get'
 
 import Layout from '../components/Layouts/main'
 import NavigationHero from '../components/NavigationHero';
+import SocialStats from '../components/SocialStats';
+import CtaButton from '../components/CtaButton';
+// import ArticlePreview from '../components/ArticlePreview'
+// import Container from '../components/Container';
+// import ContainerItem from '../components/Container/ContainerItem';
 
 class RootIndex extends React.Component {
   render() {
     // const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     // const [author] = get(this, 'props.data.allContentfulPerson.nodes')
-
     return (
         <Layout location={this.props.location}>
           <NavigationHero/>
-          <div style={{height:'100vh'}}>
-          </div>
+          <SocialStats/>
+          <CtaButton title="Want to collab with the team? or ask us a question?" externalLink="mailto:yhma.team@gmail.com" text="hit us up!"/>
         </Layout>
     )
   }
@@ -24,10 +28,14 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(limit:1,sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
         slug
+        category {
+          name
+          slug
+        }
         publishDate(formatString: "MMMM Do, YYYY")
         tags
         heroImage {

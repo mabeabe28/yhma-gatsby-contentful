@@ -12,7 +12,6 @@ export const Wrapper = styled('div')(
     backgroundColor: 'none',
     // padding: $space-2xl $space-3xl;
     borderRadius: '12px',
-    position: 'fixed',
     [theme.mediaQueries.small]: {
       margin: 0,
       borderRadius: 0,
@@ -25,7 +24,7 @@ export const NavContent = styled('div')(
   ({theme, scrollPosition}) => ({
     marginTop: '140px',
     paddingBottom: theme.space.xl2,
-    opacity: `${100-(scrollPosition/1.6)}%`,
+    opacity: `${100-scrollPosition}%`,
     [theme.mediaQueries.small]: {
       marginTop: '120px',
       paddingBottom: 0,

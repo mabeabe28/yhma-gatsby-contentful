@@ -6,7 +6,6 @@ import {
   StyledLinkLogo,
   NavigationMenu,
   NavigationMenuItem,
-  StyledLinkMenuItem,
   StyledExternalLinkMenuItem,
 } from './Navigation.style';
 
@@ -27,11 +26,6 @@ const Navigation = () => {
         </StyledLinkLogo>
 
         <NavigationMenu>
-          <NavigationMenuItem>
-            <StyledLinkMenuItem to="/" activeClassName="active">
-              Home
-            </StyledLinkMenuItem>
-          </NavigationMenuItem>
           <NavigationMenuItem>
             <StyledExternalLinkMenuItem href="https://youtube.com/yhma-team" target={'_blank'}>
               YouTube

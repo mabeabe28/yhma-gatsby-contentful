@@ -11,11 +11,12 @@ import './article-preview.scss'
 const ArticlePreview = ({ posts }) => {
   if (!posts) return null
   if (!Array.isArray(posts)) return null
-
   return (
     <Container>
       <ul className="[ article-list ]">
         {posts.map((post) => {
+  console.log('post',post);
+
           return (
             <li key={post.slug}>
               <Link to={`/${post.category.slug}/${post.slug}`} className="[ link ]">

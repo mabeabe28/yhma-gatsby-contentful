@@ -40,8 +40,11 @@ export const theme = {
   },
   /**colors */
   palette: {
-    primary: 'grey',
-    background: '#fff',
+    dark: '#000100',
+    light: '#f8f8f8',
+    primary: '#94c5cc',
+    secondary: '#b4d2e7',
+    background: '#f8f8f8',
   },
   /**media */
   mediaQueries: {
