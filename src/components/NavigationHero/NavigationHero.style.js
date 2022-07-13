@@ -28,6 +28,8 @@ export const NavContent = styled('div')(
     [theme.mediaQueries.small]: {
       marginTop: '120px',
       paddingBottom: 0,
+      paddingLeft: theme.space.md,
+      paddingRight: theme.space.md,
     },
   })
 );
