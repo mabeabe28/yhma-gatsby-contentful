@@ -24,6 +24,8 @@ const NavigationHero = () => {
           <NavContentTagLine transitionDuration={1000} delay={200}>
             <span><em>(acronym)</em> - <strong>You Had Me At</strong></span>
             <span>a group of friends sharing their lifestyle content online</span>
+            <span><em>(website still in progress)</em></span>
+
           </NavContentTagLine>
         </NavContent>
         </Wrapper>
