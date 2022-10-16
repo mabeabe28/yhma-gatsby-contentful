@@ -4,10 +4,11 @@ import {
   NavContent,
   NavContentTitle,
   NavContentTagLine,
+  NavigationLogo,
 } from './NavigationHero.style';
 
 import useScrollPosition from "../../hooks/useScrollPosition";
-
+import YHMAimage from "../../images/YHMA-Logo-Yellow.png"
 
 
 const NavigationHero = () => {
@@ -19,7 +20,7 @@ const NavigationHero = () => {
     <Wrapper>
         <NavContent scrollPosition={scrollPosition}>
           <NavContentTitle  transitionDuration={500}>
-            YHMA
+            <NavigationLogo src={YHMAimage} />
           </NavContentTitle>
           <NavContentTagLine transitionDuration={1000} delay={200}>
             <span><em>(acronym)</em> - <strong>You Had Me At</strong></span>

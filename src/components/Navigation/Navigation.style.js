@@ -105,3 +105,8 @@ export const StyledExternalLinkMenuItem = styled('a')(
   })
 );
 
+export const NavigationLogo = styled('img')(
+  ({theme}) => ({
+    width:'70px'
+  })
+);

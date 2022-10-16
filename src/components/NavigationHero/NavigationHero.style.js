@@ -34,6 +34,17 @@ export const NavContent = styled('div')(
   })
 );
 
+export const NavigationLogo = styled('img')(
+  ({theme, scrollPosition}) => ({
+    width: '180px',
+    [theme.mediaQueries.small]: {
+      marginTop: '120px',
+      paddingBottom: 0,
+      paddingLeft: theme.space.md,
+      paddingRight: theme.space.md,
+    },
+  })
+);
 
 export const NavContentTitle = styled(FadeIn)(
   ({theme}) => ({
@@ -42,6 +53,8 @@ export const NavContentTitle = styled(FadeIn)(
     lineHeight: 1,
     width: '100%',
     textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center'
   })
 );
 

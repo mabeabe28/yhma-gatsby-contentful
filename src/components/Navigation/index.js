@@ -7,7 +7,9 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   StyledExternalLinkMenuItem,
+  NavigationLogo
 } from './Navigation.style';
+import YHMAimage from "../../images/YHMA-Logo-Black.png"
 
 
 
@@ -22,12 +24,12 @@ const Navigation = () => {
       <MainNav>
 
         <StyledLinkLogo to="/">
-          YHMA
+          <NavigationLogo src={YHMAimage} alt="yhma "/>
         </StyledLinkLogo>
 
         <NavigationMenu>
           <NavigationMenuItem>
-            <StyledExternalLinkMenuItem href="https://youtube.com/yhma-team" target={'_blank'}>
+            <StyledExternalLinkMenuItem href="https://youtube.com/@yhma" target={'_blank'}>
               YouTube
             </StyledExternalLinkMenuItem>
           </NavigationMenuItem>

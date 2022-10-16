@@ -13,13 +13,13 @@ const SocialStats = () => {
     value: 1.1,
     label: 'Instagram'
   },{
-    value: 1.9,
+    value: 2.2,
     label: 'YouTube Subscribers'
   },{
-    value: 310,
+    value: 350,
     label: 'Monetized YouTube Views'
   },{
-    value: 120,
+    value: 125,
     label: 'Collective Reels & Tiktok Views'
   }];
 
